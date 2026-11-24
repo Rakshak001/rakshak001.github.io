@@ -66,8 +66,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 @media (max-width:760px){.links a:not(.keep){display:none}}
 
 /* hero */
-.hero{padding:96px 0 72px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-@media (max-width:920px){.hero{grid-template-columns:1fr;padding:64px 0 48px;gap:40px}}
+.hero{padding:96px 0 72px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center}
+@media (max-width:920px){.hero{grid-template-columns:minmax(0,1fr);padding:64px 0 48px;gap:40px}}
 .status{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px solid var(--line);
   padding:6px 12px;border-radius:999px;background:var(--card)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--glow);animation:pulse 2s infinite}
@@ -92,7 +92,8 @@ svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke
 .term-bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
 .term-bar i:nth-child(1){background:#ff6b6b}.term-bar i:nth-child(2){background:#ffc94d}.term-bar i:nth-child(3){background:#4cd97b}
 .term-bar span{margin-left:10px;color:var(--muted);font-size:12px}
-.term-body{padding:18px 18px 22px;min-height:300px;line-height:1.9}
+.term-body{padding:18px 18px 22px;min-height:300px;line-height:1.9;overflow-x:auto}
+@media (max-width:600px){.term{font-size:12px}.step .t{min-width:78px}}
 .term-body .p{color:var(--accent)}
 .term-body .c{color:var(--muted)}
 .step{display:flex;align-items:center;gap:10px;opacity:.25;transition:opacity .4s}
@@ -110,7 +111,7 @@ svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke
 .stat b{display:block;font-family:"Space Grotesk",sans-serif;font-size:34px;letter-spacing:-.02em}
 .stat b em{font-style:normal;color:var(--accent)}
 .stat span{color:var(--muted);font-size:14px}
-@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:20px 16px}.stat b{font-size:28px}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 
 /* sections */
 section{padding:96px 0 0}
